@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg: #F2F2F2;
+    --bg-card: #FEFBF6;
+    --text: #0000;
+    --border: #EAEAEA;
+    --badge: #00ABB3;
+    --after-text: #1746A2;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+    background-color: var(--bg);
+}
+
+.card {
+    background-color:var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 7px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card__content {
+    padding: 2em 1em;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1;
+}
+
+.card__name {
+    margin-top: 2.5em;
+}
+
+.card__heading {
+    font-size: 1.6em;
+    font-weight: 500;
+    width: fit-content;
+    background-image: linear-gradient(#1746A2, #1746A2);
+    background-size: 0 2px, auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    transition: all .2s ease-out;
+}
+
+.card__heading:hover {
+    color: var(--after-text);
+    background-size: 100% 2px, auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.card__description {
+    margin-top: .5em;
+    font-size: .8em;
+    font-weight: 300;
+}   
+
+.card__footer {
+    margin-top: 2em;
+    height: 5em;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+}
+
+.card__button {
+    text-align: center;
+    background-color: var(--after-text);
+    border-radius: 4px;
+}
+
+.btn {
+    color: inherit;
+    text-decoration: underline rgba(255, 255, 255, 0);
+    transition: 300ms;
+    display: inline-block;
+    padding: .5em .4em;
+    text-align: center;
+    font-weight: 400;
+    color: var(--bg);
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.btn:hover {
+    text-decoration-color: rgba(255, 255, 255, 1);
+}
+
+.card__footer-text {
+    font-size: 1.6em;
+}
+
+.card__footer-deleted {
+    font-size: 1em;
+    font-weight: 300;
+}
+
+@media (max-width: 950px) {
+    .card__heading {
+        font-size: 1.4em;
+    }
+    .card__footer-text {
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width: 550px) {
+    .card__button {
+        margin-top: 1em;
+    }
+    .card__footer {
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+@media (max-width: 450px) {
+    .card__heading {
+        font-size: 1.1em;
+    }
+    .card__footer-text {
+        font-size: 1.1em;
+    }
+    .card__description {
+        font-size: .7em;
+    }
+    .btn {
+        font-size: .9em;
+    }
+}
+
+@media (max-width: 300px) {
+    .card__heading {
+        font-size: .9em;
+    }
+    .card__footer-text {
+        font-size: .9em;
+    }
+    .card__footer-deleted {
+        font-size: .6em;
+    }
+    .card__description {
+        font-size: .6em;
+    }
+    .btn {
+        font-size: .7em;
+    }
+}
+
+@media (max-width: 250px) {
+    .card__heading {
+        font-size: .7em;
+    }
+    .card__footer-text {
+        font-size: .7em;
+    }
+    .card__footer-deleted {
+        font-size: .5em;
+    }
+    .card__description {
+        font-size: .5em;
+    }
+}
+
+.card__colorbar {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    gap: .5em;
+}
+
+.color-bar::after {
+    display: flex;
+    justify-content: center;
+    content: "";
+    height: 17px;
+    width: 17px;
+    flex-shrink: 0;
+}
+
+.color-bar {
+    border-radius: 100px;
+}
+
+.color_1 {
+    background-color: #444444;
+    border: 1px solid #343A40;
+}
+.color_2 {
+    background-color: blue;
+    border: 1px solid darkblue;
+}
+.color_3 {
+    background-color: red;
+    border: 1px solid darkred;
+}
+.color_4 {
+    background-color: white;
+    border: 1px solid lightgrey;
+}
+.color_5 {
+    background-color: #A25B5B;
+    border: 1px solid darkred;
+}
+.color_6 {
+    background-color: black;
+    border: 1px solid black;
+}
+.color_7 {
+    background-color: gold;
+    border: 1px solid #FAC213;
+}
+.color_8 {
+    background-color: green;
+    border: 1px solid darkgreen;
+}
+.color_9 {
+    background-color: #790252;
+    border: 1px solid #4C0033;
+}
+
+
+.card__badge {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    padding: .55em .75em;
+    background-color: var(--badge);
+    border-radius: 0px 4px;
+}
+
+.card__badge-text {
+    font-size: 0.8em;
+    font-weight: 400;
+    color: var(--bg-card);
+    text-transform: uppercase;
+}
